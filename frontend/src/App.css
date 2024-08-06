@@ -7,10 +7,25 @@
 }
 
 .docs-button {
-  background-color: #4CAF50;
+  background-color: #a6cb12;
   height: 40px;
   width: 200px;
   border: none;
   cursor: pointer;
   font-family: 'Poppins',sans-serif;
+}
+
+.add-input{
+  width: 95%;
+  height: 40px;
+  outline: none;
+  border: 1px solid #98c318;
+  border-radius: 0px;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.button-container{
+  text-align: center;
+  margin: 30px;
 }
