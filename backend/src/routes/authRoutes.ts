@@ -33,6 +33,17 @@ export default function authRoutes(){
     
     router.post('/signup',async(req:Request,res:Response)=>{
         //Input validation
+        const validateSignup = signupValidation.safeParse(req.body)
+        if(!validateSignup.success){
+            return res.status(400).json(validateSignup.error.issues)
+        }
+        //Signup logic
+        const {name,email,password} = req.body
+        // const hashedPassword =
+        const user = await prisma.user.findUnique({where:{email}})
+        if(user){
+            return res.status(400).json({Err0r:"User already exists"})
+        }
     })
 }
 
